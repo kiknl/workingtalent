@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Comment */
+
+        /* Tag selector */
+        img {
+            border:  12px solid green;
+        }
+
+        /* Class selector */
+        .mijn-class {
+            color: blue;
+            background-color: yellow ;
+        }
+
+         /* ID selector */
+         #mijnheader{
+            font-size: 60px;
+            color:blueviolet;
+         }
+
+    </style>
+
+    <script>
+        // Commentaar op 1 regel
+
+        /*
+            Comment op meerdere regels
+        */
+        let a = 6
+        let b = 23; let c = "Demo" // ; is om opdrachten te scheiden op 1 regel. als je entered is het niet nodig
+        let d = true;
+
+        console.log('Berekening is ' + (a + b))
+
+        // Constant
+        const e = 123;
+        // e = 333;  DIT KAN NIET. Constant mag maar 1 keer geschreven worden
+        
+        // Functions declaration
+        function calculate(multiply) {
+            // Hier doen we wat berekeningen
+            // binnen de functions heb je toegang tot de variables
+            console.log(e*multiply);
+        }
+
+        // Function call
+        calculate(4);
+
+        function calculateWithInput() {
+            // Invoer veld uitlezen
+            let element = document.getElementById('invoer1');
+
+            // element is de invoer element en .value is de waarde erin
+            let waarde = element.value;
+            
+            // Je mag een andere function aanroepen
+            calculate(waarde)
+        }
+
+    </script>
+
+</head>
+<body>
+    <!-- Comment (styling 'id' id selector)-->
+    <h1 id="mijnheader">Mijn website</h1>
+    <h2 class="mijn-class">Mijn 2e header</h2>
+
+    <p class="mijn-class">Dit is mijn 1ste paragraaf</p>
+    <p>Dit is mijn 2e paragraaf</p>
+
+    <!-- Comment (Inline styling met style)-->
+    <span style="color:red ; font-size:140%;">Dit is mijn 1ste span</span>
+    <span>Dit is mijn 2e span</span>
+
+    <!-- Comment (Dit wordt door de browser genegeerd)-->
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+<ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ol>
+
+<img src="https://www.qlic.nl/uploads/images/definities/html.jpg">
+<br>
+<a href="http://www.nu.nl" target="_blank">Klik hier</a>
+
+<br><br>
+<input type="number" id="invoer1">
+
+<button type="button" onclick="calculateWithInput()">
+    Klik me
+</button>
+
+</body>
+</html>
